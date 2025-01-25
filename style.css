@@ -3,7 +3,6 @@
   display: block;
   position: relative;
   left: 10px;
-  
   z-index: 1;
   
   -webkit-user-select: none;
@@ -14,8 +13,29 @@
 {
   text-decoration: none;
   color: #232323;
-  
   transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  background: tomato;
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
 }
 
 
