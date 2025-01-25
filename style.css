@@ -29,7 +29,6 @@
   position: absolute;
   top: -7px;
   left: -5px;
-  background: tomato;
   cursor: pointer;
   
   opacity: 0; /* hide this */
