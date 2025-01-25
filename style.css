@@ -16,7 +16,7 @@
     position: absolute;
   }
 
-  .box#one {
+  .box#p1 {
     width: 90px;
     height: 60px;
     background: red;
@@ -38,5 +38,5 @@
   }
 
   .box#five {
-    
+
   }
