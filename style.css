@@ -11,32 +11,3 @@
     /* For clarity. */
     border: 1px solid black;
   }
-  
-  .box {
-    position: absolute;
-  }
-
-  .box#p1 {
-    width: 90px;
-    height: 60px;
-    background: red;
-    
-    top: 20px;
-    left: 60px;
-  }
-
-  .box#two {
-
-  }
-
-  .box#three {
-
-  }
-
-  .box#four {
-
-  }
-
-  .box#five {
-
-  }
