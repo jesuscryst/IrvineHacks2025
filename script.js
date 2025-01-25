@@ -9,7 +9,12 @@ questions = {
 }
 
 vitamins = {
-    1: ['A'], 4: ['B'], 3: ['C'], 5: ['D'], 0: ['E'], 2: ['K']
+    1: ['A'], 
+    4: ['B'], 
+    3: ['C'], 
+    5: ['D'], 
+    0: ['E'], 
+    2: ['K']
 }
 
 let result = 0;
@@ -73,7 +78,7 @@ function calculateResult() {
     
     var row1 = document.createElement("div");
     row1.classList.add("row");
-    row1.innerHTML = vitamins[result][0];
+    row1.innerHTML = `You are Vitamin ${vitamins[result][0]}!`;
     rDiv.appendChild(row1);
 
     var row2 = document.createElement("div");
