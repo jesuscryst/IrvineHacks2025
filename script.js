@@ -46,23 +46,6 @@ function displayStart() {
 }
 
 function startQuiz() {
-    /// 1) delete div. id=startQuiz
-    /// 2) create q. Structure vv
-    /* <div id="q1">
-        <div class="container" style="text-align: center; justify-content: center;">
-            <div class="row">
-                <img src="..." alt="...">
-            </div>
-            <div class="row">
-                q1?
-            </div>
-            <div class="row">
-                <div class="col"><button>a1</button></div>
-                <div class="col"><button>a2</button></div>
-            </div>
-        </div>
-    </div> */
-    /// 
     document.getElementById("load").innerHTML = "";
     displayQuestion();
 }
@@ -109,15 +92,21 @@ function calculateResult() {
     var row4 = document.createElement("div");
     row4.classList.add("row");
 
+    var col1 = document.createElement("div");
+    col1.classList.add("col");
     var retakeButton = document.createElement("button");
     retakeButton.innerHTML = "Retake";
     retakeButton.addEventListener("click", resetQuiz);
-    row4.appendChild(retakeButton);
+    col1.appendChild(retakeButton);
+    row4.appendChild(col1);
 
+    var col2 = document.createElement("div");
+    col2.classList.add("col");
     var homeButton = document.createElement("button");
     homeButton.innerHTML = "Home";
     homeButton.onclick = function() { location.href='main.html'; };
-    row4.appendChild(homeButton);
+    col2.appendChild(homeButton);
+    row4.appendChild(col2);
 
     rDiv.appendChild(row4);
 
@@ -125,6 +114,20 @@ function calculateResult() {
 }
 
 function createQuestion(i) {
+    /* <div id="q1">
+        <div class="container" style="text-align: center; justify-content: center;">
+            <div class="row">
+                <img src="..." alt="...">
+            </div>
+            <div class="row">
+                q1?
+            </div>
+            <div class="row">
+                <div class="col"><button>a1</button></div>
+                <div class="col"><button>a2</button></div>
+            </div>
+        </div>
+    </div> */
     var qDiv = document.createElement("div");
     qDiv.id = `q${i}`;
     qDiv.classList.add("container");
