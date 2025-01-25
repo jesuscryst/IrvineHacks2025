@@ -1,0 +1,17 @@
+.container {
+    /* You can set this to whatever you wish. */
+    width: max-content;
+    
+    /* You'll need to set a height. */
+    height: 400px;
+    
+    /* Allows positioning relative to this container. */
+    position: relative;
+    
+    /* For clarity. */
+    border: 1px solid black;
+  }
+  
+  .box {
+    position: absolute;
+  }
