@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function() {
+    displayStart();
+});
+
 questions = {
     "q1": ["Night Owl or Early Bird?", "Night Owl", "Early Bird"],
     "q2": ["Tea or Coffee?", "Tea", "Coffee"],
@@ -9,6 +13,37 @@ vitamins = {
 }
 
 let result = 0;
+
+function displayStart() {
+    /* <div id="startQuiz" style="text-align: center;">
+        <div>title image <img src="..." alt="..."></div>
+        <div>cover image for the quiz <img src="..." alt="..."></div>
+        <div><button class="button" onclick="startQuiz()">Start</button></div>
+    </div> */
+    var sDiv = document.createElement("div");
+
+    var div1 = document.createElement("div");
+    var startTitle = document.createElement("img");
+    startTitle.src = "personality_title";
+    div1.appendChild(startTitle);
+    sDiv.appendChild(div1);
+
+    var div2 = document.createElement("div");
+    var startImg = document.createElement("img");
+    startImg.src = "personality_img";
+    div1.appendChild(startImg);
+    sDiv.appendChild(div1);
+
+    var div3 = document.createElement("div");
+    var startButton = document.createElement("button");
+    startButton.innerHTML = "Start";
+    startButton.addEventListener("click", startQuiz);
+    div3.appendChild(startButton);
+    sDiv.appendChild(div3);
+
+    document.getElementById("load").appendChild(sDiv);
+
+}
 
 function startQuiz() {
     /// 1) delete div. id=startQuiz
@@ -28,8 +63,7 @@ function startQuiz() {
         </div>
     </div> */
     /// 
-    var deleteDiv = document.getElementById("startQuiz");
-    deleteDiv.remove();
+    document.getElementById("load").innerHTML = "";
     displayQuestion();
 }
 
@@ -71,6 +105,21 @@ function calculateResult() {
     var vitaminPInfo = document.createElement("p");
     vitaminPInfo.innerHTML = "personality information from vitamins[result][1]."
     rDiv.appendChild(vitaminPInfo);
+
+    var row4 = document.createElement("div");
+    row4.classList.add("row");
+
+    var retakeButton = document.createElement("button");
+    retakeButton.innerHTML = "Retake";
+    retakeButton.addEventListener("click", resetQuiz);
+    row4.appendChild(retakeButton);
+
+    var homeButton = document.createElement("button");
+    homeButton.innerHTML = "Home";
+    homeButton.onclick = function() { location.href='main.html'; };
+    row4.appendChild(homeButton);
+
+    rDiv.appendChild(row4);
 
     return rDiv;
 }
@@ -133,4 +182,11 @@ function nextQuestion(choiceNum) {
     else {
         displayResult();
     }
+}
+
+function resetQuiz() {
+    document.getElementById("questions").innerHTML = "";
+    i = 1;
+    result = 0;
+    displayStart();
 }
