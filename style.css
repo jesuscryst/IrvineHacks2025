@@ -15,3 +15,28 @@
   .box {
     position: absolute;
   }
+
+  .box#one {
+    width: 90px;
+    height: 60px;
+    background: red;
+    
+    top: 20px;
+    left: 60px;
+  }
+
+  .box#two {
+
+  }
+
+  .box#three {
+
+  }
+
+  .box#four {
+
+  }
+
+  .box#five {
+    
+  }
