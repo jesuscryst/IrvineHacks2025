@@ -145,7 +145,7 @@ function createQuestion(i) {
     row1.classList.add("row");
     row1.style.justifyContent = "center";
     const qImage = document.createElement("img");
-    qImage.src = `q${i}_Image.png`;
+    qImage.src = `images/q${i}_Image.png`;
     qImage.classList.add("qImageResize");
     row1.appendChild(qImage);
     qDiv.appendChild(row1);

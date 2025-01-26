@@ -11,8 +11,26 @@
 </head>
 <body>
     <h1>Which Vitamin Are You?</h1>
-    <p>Learn more about vitamins <a href="...">here</a>.</p>
     
+    <nav role="navigation">
+        <div id="menuToggle">
+        <!--
+        A fake / hidden checkbox is used as click reciever,
+        so you can use the :checked selector on it.
+        -->
+        <input type="checkbox" />
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <ul id="menu">
+        <a href="main.html"><li>Home</li></a>
+        <a href="personalityQuiz.html"><li>Personality Quiz</li></a>
+        </ul>
+        </div>
+    </nav>
+
     <div id="load" class="container"></div>
 
     <div id="questions"></div>

@@ -22,3 +22,74 @@
 #load {
     justify-content: center;
 }
+
+#menuToggle {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    z-index: 3;  /* Ensure toggle is on top of the menu */
+}
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    opacity: 0;  /* Hide the checkbox itself */
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    background: #cdcdcd;
+    border-radius: 3px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Change hamburger icon when checked */
+#menuToggle input:checked ~ span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px); /* Upper line transforms */
+}
+
+#menuToggle input:checked ~ span:nth-child(2) {
+    opacity: 0;  /* Middle line disappears */
+}
+
+#menuToggle input:checked ~ span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px); /* Lower line transforms */
+}
+
+/* The actual menu */
+#menu {
+    position: fixed;
+    top: 0;
+    right: -300px;  /* Start hidden off-screen on the right */
+    width: 300px;
+    height: 100vh;  /* Full height */
+    background: #ededed;
+    list-style-type: none;
+    padding-top: 100px;
+    transition: right 0.3s ease;
+    z-index: 2;  /* Ensure it stays behind the toggle button */
+}
+
+#menu a {
+    text-decoration: none;
+    color: #232323;
+    display: block;
+    padding: 15px 20px;
+}
+
+#menu a:hover {
+    background: #ddd;  /* Add hover effect */
+}
+
+#menuToggle input:checked ~ #menu {
+    right: 0;  /* Slide the menu in from the right when checked */
+}
