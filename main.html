@@ -12,7 +12,7 @@
     <title>Vitamins</title>
 </head>
 <body>
-    <nav role="navigation" style="padding: 20px;">
+    <nav role="navigation" style="padding: 20px; position: fixed; top: 0;">
         <div id="menuToggle" style="justify-content: right;">
         <!--
         A fake / hidden checkbox is used as click reciever,
@@ -25,34 +25,72 @@
         <span></span>
 
         <ul id="menu">
-        <a href="main.html"><li>Home</li></a>
-        <a href="personalityQuiz.html"><li>Personality Quiz</li></a>
+        <a href="main.html" style="margin: 20px;"><li>Home</li></a>
+        <a href="personalityQuiz.html" style="margin: 20px;"><li>Personality Quiz</li></a>
         </ul>
         </div>
     </nav>
 
-    <div style="text-align: center;">
+    <div style="text-align: center; padding-top: 20px;">
         <h1>Vitamins</h1>
     </div>
 
     <div style="display: flexbox;">
         <img data-bs-placement="left" data-bs-toggle="popover" 
-    data-bs-title="Vitamin D" data-bs-content="And here's some amazing content. It's very engaging. Right?" 
+    data-bs-title="Vitamin D" data-bs-content="Vitamin D is important for your body’s ability to absorb calcium and phosphate, and is needed for healthy bones and teeth. Your body can make this vitamin when your skin is exposed to the sun.
+    Fun fact: Vitamin D is the only vitamin that your body can produce in significant amounts on its own without needing to obtain it through your diet.
+    " 
     src="images/sun.png" style="float:right; padding-right: 30px; width:20%; height:20%;"/>
     
         <img data-bs-placement="top" data-bs-toggle="popover" 
-    data-bs-title="Vitamin B12" data-bs-content="And here's some amazing content. It's very engaging. Right?"
+    data-bs-title="Vitamin B12" data-bs-content="Vitamin B12 works in conjunction with B9 to help produce red blood cells and also maintain a healthy nervous system."
     src="images/cow.png" style="position:absolute; top: 500px; right:50px; width: 20%; height: auto;"/>
 
         <img data-bs-placement="top" data-bs-toggle="popover" 
-    data-bs-title="Vitamin B5, B7" data-bs-content="And here's some amazing content. It's very engaging. Right?"
+    data-bs-title="Vitamin B5, B7" data-bs-content="Vitamin B5 (pantothenic acid) is an essential molecule for your cells to produce ATP and for the synthesis and breakdown of different molecules. 
+    Vitamin B7 (biotin) is important for the breakdown of carbohydrates and proteins you eat, and is also necessary for the synthesis of fatty acids."
     src="images/pail.png" style="position:absolute; top: 580px; right:75px; width: 6%; height: auto;"/>
 
         <img data-bs-placement="top" data-bs-toggle="popover" 
-    data-bs-title="Vitamin C" data-bs-content="And here's some amazing content. It's very engaging. Right?"
+    data-bs-title="Vitamin C" data-bs-content="Vitamin C helps the body form collagen, which is important for skin health and maintaining cartilage and blood vessels. This vitamin is also essential for wounds to heal.
+    
+    Fun fact: Most animals are actually able to produce their own vitamin C! Humans have lost this ability millions of years ago and now must obtain it through our diet.
+    "
     src="images/orange.png" style="position:absolute; top: 500px; left:20px; width: 25%; height: auto;"/>
 
+        <img data-bs-placement="left" data-bs-toggle="popover" 
+        data-bs-title="Vitamin E" data-bs-content="Vitamin E is an important antioxidant that protects your cells from damage from chemicals called free radicals and also keeps your immune system strong."
+        src="images/wheat.png" style="position: absolute; top: 150px; right: 400px;">
 
+        <img data-bs-placement="left" data-bs-toggle="popover" 
+        data-bs-title="Vitamin B9" data-bs-content="Vitamin B9 (folate/folic acid) helps produce red blood cells and the DNA in all of your cells. It is also very important for pregnant women to get enough of this vitamin to prevent birth defects."
+        src="images/beet.png" style="position: absolute; top: 150px; right: 550px;">
+
+        <img data-html="true" data-bs-placement="left" data-bs-toggle="popover" 
+        data-bs-title="Vitamin A" 
+        data-bs-content="Vitamin A helps maintain healthy teeth, bones, and mucous membranes like the skin and nose. It also promotes good vision, especially in dim light. Fun fact: If you’re ever stranded in the Arctic and need to eat a polar bear, avoid its liver! It contains such a high amount of vitamin A that it is toxic to consume."
+        src="images/carrot.png" style="position: absolute; top: 150px; right: 700px;">
+
+        <img data-bs-placement="left" data-bs-toggle="popover" 
+        data-bs-title="Vitamin B1" data-bs-content="Vitamin B1 (thiamine) is essential for your body to break down carbohydrates that you eat.
+        Fun fact: Polish biochemist Casimir Funk was the first person to determine the structure of this vitamin and coined the term “vitamine”, but the final “e” was eventually dropped after it was found that not all vitamins were amines.
+        "
+        src="images/pea.png" style="position: absolute; top: 150px; right: 850px;">
+
+        <img data-bs-placement="left" data-bs-toggle="popover" 
+        data-bs-title="Vitamin K" data-bs-content="Vitamin K is essential to allow your blood to coagulate and close wounds when you are bleeding.
+        Fun fact: At the time of its discovery, vitamins were being named alphabetically based on when they were discovered, but vitamin K broke this convention. For its important role in blood coagulation, this vitamin was named after the German word “koagulation”.
+        "
+        src="images/broc.png" style="position: absolute; top: 150px; left: 725px;">
+
+        <img data-bs-placement="top" data-bs-toggle="popover" 
+        data-bs-title="Vitamin B3" data-bs-content="Vitamin B3 (niacin) not only helps release energy from foods, but also helps to keep your skin and nervous system healthy.
+        "
+        src="images/chicken.png" style="position: absolute; width: 7%; height: auto; bottom: 150px; left: 500px;">
+
+        <img data-bs-placement="right" data-bs-toggle="popover" 
+        data-bs-title="Vitamin B6" data-bs-content="Vitamin B6 helps in the production of hemoglobin, which allows your red blood cells to carry oxygen, and maintain brain health."
+        src="images/banana.png">
 
     </div>
     

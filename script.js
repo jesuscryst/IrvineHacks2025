@@ -9,12 +9,12 @@ questions = {
 }
 
 vitamins = {
-    1: ['A'], 
-    4: ['B'], 
-    3: ['C'], 
-    5: ['D'], 
-    0: ['E'], 
-    2: ['K']
+    1: ['A', "You have a unique way of seeing the world—one that goes beyond the surface. Whether it’s understanding the deeper meaning behind people’s actions or grasping the unseen connections between ideas, your mind is always working at a higher level. You’re the type of person who pauses to reflect, who considers multiple perspectives before making a decision, and who often sees things others may miss. Your ability to grasp complex concepts and provide profound insights makes you a go-to person for advice and guidance. People tend to appreciate your thoughtful and perceptive nature."], 
+    4: ['B', "You’re like a burst of sunshine in any room, always ready to take on the next adventure with enthusiasm and vigor. Your energy is contagious—whether you're at work, socializing, or just going through your day, you have a natural ability to ignite excitement in others. Your boundless enthusiasm keeps you constantly moving, always up for a challenge, and ready to push your limits. You don't just go through the motions of life; you embrace each moment with intensity and passion. The world around you never seems dull because you bring a vibrant energy that makes everything feel alive."], 
+    3: ['C', "You have a tendency to focus on the positives, even in negative situations. You don’t dwell on the past, and can see the lessons learned from your mistakes. When faced with challenges you  Your positive mindset allows you to approach challenges with a sense of possibility and enthusiasm. Similar to the boost to skin health and the immune system from vitamin C, your optimism and hopeful outlook when life gets tough boosts the spirits of those around you."], 
+    5: ['D', "You trust your abilities and your decisions. You have the courage to take on risks and challenges with conviction and assurance of your success. Your belief in yourself helps you navigate life’s ups and downs with ease, knowing you have the strength to handle any obstacles in your way. Just as you need vitamin D to help your body absorb calcium to grow your bones, your confidence in yourself lays a firm foundation for your own growth and well-being."], 
+    0: ['E', "You remain composed and level-headed, even in stressful situations. When the pressure is on, you don’t become overwhelmed, and take on challenges with a quiet and relaxed determination. Others around you may rely on your soothing presence under stress. Much like how vitamin E keeps your cells protected and stabilized from reacting with harmful free radicals, you offer emotional stability, protecting your own well-being and potentially others’ as well."], 
+    2: ['K', "You are driven by big dreams. You have a clear sense of purpose, and are determined to achieve your goals and push your limits to become the best version of yourself. With a strong desire for success you won’t let obstacles stop your progress, like how vitamin K is needed to stop any bleeding."]
 }
 
 let result = 0;
@@ -31,7 +31,8 @@ function displayStart() {
     div2.classList.add("row");
     div2.style.justifyContent = "center";
     var startImg = document.createElement("img");
-    startImg.src = "personality_img";
+    startImg.classList.add("qImageResize");
+    startImg.src = "images/personality_img.png";
     div2.appendChild(startImg);
     sDiv.appendChild(div2);
 
@@ -40,6 +41,8 @@ function displayStart() {
     div3.style.justifyContent = "center";
     var startButton = document.createElement("button");
     startButton.innerHTML = "Start";
+    startButton.style.width = "200px";
+    startButton.style.margin = "20px"
     startButton.addEventListener("click", startQuiz);
     div3.appendChild(startButton);
     sDiv.appendChild(div3);
@@ -78,14 +81,19 @@ function calculateResult() {
     var row1 = document.createElement("div");
     row1.classList.add("row");
     row1.style.justifyContent = "center";
-    row1.innerHTML = `You are Vitamin ${vitamins[result][0]}!`;
+    if (vitamins[result][0] == 'B') {
+        row1.innerHTML = `You are B Vitamins!`;
+    } else {
+        row1.innerHTML = `You are Vitamin ${vitamins[result][0]}!`;
+    }
     rDiv.appendChild(row1);
 
     var row2 = document.createElement("div");
     row2.classList.add("row");
     row2.style.justifyContent = "center";
     var vitaminImg = document.createElement("img");
-    vitaminImg.src = `vitamin_${vitamins[result][0]}`
+    vitaminImg.classList.add("qImageResize");
+    vitaminImg.src = `images/vitamin_${vitamins[result][0]}.png`
     row2.appendChild(vitaminImg);
     rDiv.appendChild(row2);
     
@@ -93,7 +101,8 @@ function calculateResult() {
     row3.classList.add("row");
     row3.style.justifyContent = "center";
     var vitaminPInfo = document.createElement("p");
-    vitaminPInfo.innerHTML = "personality information from vitamins[result][1]."
+    vitaminPInfo.style.margin = "20px";
+    vitaminPInfo.innerHTML = vitamins[result][1];
     rDiv.appendChild(vitaminPInfo);
 
     var row4 = document.createElement("div");

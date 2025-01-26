@@ -1,3 +1,9 @@
+body
+{
+  background-color: #C7EE9E !important;
+  overflow-y: hidden;
+}
+
 #q1 {
     text-align: center;
     justify-content: center;
@@ -20,10 +26,12 @@
 }
 
 button {
-    border-radius: 20px;
-    background-color: aliceblue;
-    box-shadow: #232323;
+    border-radius: 10px;
+    background-color:rgb(215, 216, 122);
+    box-shadow: 1px 1px 3px #232323;
     width: 200px;
+    height: 50px;
+    outline-color: forestgreen;
 }
 
 #load {
@@ -50,7 +58,7 @@ button {
 
 #menuToggle a:hover
 {
-  color: tomato;
+    color: rgb(222, 225, 55);
 }
 
 #menuToggle input
@@ -78,7 +86,7 @@ button {
   margin-bottom: 5px;
   position: relative;
   
-  background: #cdcdcd;
+  background-color: forestgreen;
   border-radius: 3px;
   
   z-index: 1;
@@ -94,7 +102,7 @@ button {
 #menuToggle input:checked ~ span
 {
   opacity: 1;
-  background: #232323;
+  background: rgb(222, 225, 55);
 }
 
 #menu
@@ -105,7 +113,8 @@ button {
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
-  background: #ededed;
+  background: rgb(251, 255, 178);
+  box-shadow: 1px 1px 3px rgb(222, 225, 55);
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
