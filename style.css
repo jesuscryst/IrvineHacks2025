@@ -37,7 +37,7 @@ body
   cursor: pointer;
   
   opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
+  z-index: 1; /* and place it over the hamburger */
   
   -webkit-touch-callout: none;
 }
@@ -74,10 +74,10 @@ body
 {
   position: absolute;
   width: 300px;
+  height: 110vh;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
-  
   background: #ededed;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;

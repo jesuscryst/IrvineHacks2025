@@ -141,15 +141,6 @@ function createQuestion(i) {
     qDiv.id = `q${i}`;
     qDiv.classList.add("container");
 
-    var row1 = document.createElement("div");
-    row1.classList.add("row");
-    row1.style.justifyContent = "center";
-    const qImage = document.createElement("img");
-    qImage.src = `images/q${i}_Image.png`;
-    qImage.classList.add("qImageResize");
-    row1.appendChild(qImage);
-    qDiv.appendChild(row1);
-
     var row2 = document.createElement("div");
     row2.classList.add("row");
     row2.style.justifyContent = "center";
@@ -158,6 +149,7 @@ function createQuestion(i) {
 
     var row3 = document.createElement("div");
     row3.classList.add("row");
+    row3.style.alignItems = "center";
     row3.style.justifyContent = "center";
     row3.style.display = "flex";
 
@@ -168,6 +160,14 @@ function createQuestion(i) {
     a1Button.addEventListener("click", () => { nextQuestion("choice1"); });
     a1Div.appendChild(a1Button);
     row3.appendChild(a1Div);
+
+    var imgDiv = document.createElement("div");
+    imgDiv.classList.add("col");
+    const qImage = document.createElement("img");
+    qImage.src = `images/q${i}_Image.png`;
+    qImage.classList.add("qImageResize");
+    imgDiv.appendChild(qImage);
+    row3.appendChild(imgDiv);
 
     var a2Div = document.createElement("div");
     a2Div.classList.add("col");
