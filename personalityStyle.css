@@ -1,7 +1,24 @@
 #q1 {
     text-align: center;
+    justify-content: center;
+    display: flexbox;
 }
 
 .row {
     text-align: center;
+}
+
+.qImageResize {
+    width: 400px;
+    height: auto;
+}
+
+.col {
+    padding: 0;
+    margin: 0;
+    width: 200px;
+}
+
+#load {
+    justify-content: center;
 }
